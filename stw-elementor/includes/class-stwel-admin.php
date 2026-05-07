@@ -13,7 +13,7 @@ class STWEL_Admin {
         if ( $screen && $screen->post_type === 'stwel_item' && $screen->base === 'edit' ) {
             echo '<div class="notice notice-info is-dismissible"><p>';
             echo ' <strong>Static Timeline for Elementor</strong> — ';
-            echo 'Items add করুন, তারপর Elementor এ <strong>"Static Timeline"</strong> widget যোগ করুন।';
+            echo 'Items add ,then Elementor  <strong>"Static Timeline"</strong> widget can be used to display them in a timeline layout.';
             echo ' | <a href="https://github.com/Arifur999" target="_blank">by Arif</a>';
             echo '</p></div>';
         }
