@@ -1,0 +1,252 @@
+/* =====================================================
+   Static Timeline for Elementor – Frontend CSS v1.0.0
+   Author: Arif  https://github.com/Arifur999
+   ===================================================== */
+
+.stwel-wrap *, .stwel-wrap *::before, .stwel-wrap *::after {
+    box-sizing: border-box; margin: 0; padding: 0;
+}
+
+/* ── Wrapper ── */
+.stwel-wrap {
+    width: 100%;
+    padding: 40px 20px;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ── Inner ── */
+.stwel-inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ──────────────────────────────────
+   VERTICAL LINE
+   ────────────────────────────────── */
+.stwel-track {
+    position:  absolute;
+    left:      50%;
+    top:       0; bottom: 0;
+    transform: translateX(-50%);
+    width:     2px;
+    background: rgba(0,0,0,.08);
+    border-radius: 10px;
+    overflow:  hidden;
+    z-index:   0;
+}
+.stwel-line {
+    width: 100%;
+    height: 0;
+    background: #c9982a;
+    border-radius: 10px;
+    transition: height .04s linear;
+}
+
+/* ──────────────────────────────────
+   ITEM ROW
+   ────────────────────────────────── */
+.stwel-item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 56px 1fr;
+    align-items: center;
+    gap: 24px;
+    padding: 10px 0;
+    min-height: 96px;
+    z-index: 1;
+}
+
+/* LEFT */
+.stwel-left .stwel-card-wrap { grid-column:1; order:1; justify-content:flex-end;   }
+.stwel-left .stwel-mid       { grid-column:2; order:2;                             }
+.stwel-left .stwel-date-wrap { grid-column:3; order:3; justify-content:flex-start; }
+.stwel-left .stwel-card      { text-align:right; }
+.stwel-left .stwel-sub       { margin-left:auto; }
+
+/* RIGHT */
+.stwel-right .stwel-date-wrap { grid-column:1; order:1; justify-content:flex-end; text-align:right; }
+.stwel-right .stwel-mid       { grid-column:2; order:2;                            }
+.stwel-right .stwel-card-wrap { grid-column:3; order:3; justify-content:flex-start;}
+.stwel-right .stwel-card      { text-align:left; }
+
+/* ──────────────────────────────────
+   CARD
+   ────────────────────────────────── */
+.stwel-card-wrap { display:flex; width:100%; }
+.stwel-left  .stwel-card-wrap { justify-content:flex-end;   }
+.stwel-right .stwel-card-wrap { justify-content:flex-start; }
+
+.stwel-card {
+    background:    #ffffff;
+    border:        1px solid #e8e8f0;
+    border-radius: 12px;
+    padding:       28px 32px;
+    max-width:     520px;
+    width:         100%;
+    box-shadow:    0 2px 20px rgba(0,0,0,.07);
+    transition:    box-shadow .3s ease, transform .3s ease, border-color .3s ease;
+    cursor: default;
+}
+.stwel-card:hover {
+    transform: translateY(-3px);
+}
+
+.stwel-img-wrap {
+    margin-bottom: 14px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.stwel-img-wrap img { width:100%; height:auto; display:block; }
+
+/* Sub heading */
+.stwel-sub {
+    display:        inline-block;
+    font-family:    'Lato', sans-serif;
+    font-size:      11px;
+    font-weight:    700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color:          #c9982a;
+    background:     rgba(201,152,42,0.10);
+    border-radius:  20px;
+    padding:        3px 10px;
+    margin-bottom:  9px;
+    line-height:    1;
+}
+
+/* Heading */
+.stwel-h {
+    font-family:   'Playfair Display', Georgia, serif;
+    font-size:     22px;
+    font-weight:   700;
+    line-height:   1.35;
+    color:         #1a1a2e;
+    margin-bottom: 10px;
+}
+
+/* Paragraph */
+.stwel-p {
+    font-family: 'Lato', sans-serif;
+    font-size:   15px;
+    line-height: 1.8;
+    color:       #5a6273;
+    font-weight: 400;
+}
+
+/* ──────────────────────────────────
+   CENTER ICON DOT
+   ────────────────────────────────── */
+.stwel-mid {
+    display:         flex;
+    justify-content: center;
+    align-items:     center;
+    width:           56px;
+    z-index:         2;
+}
+.stwel-dot {
+    width:           56px;
+    height:          56px;
+    border-radius:   50%;
+    background:      #c9982a;
+    display:         flex;
+    align-items:     center;
+    justify-content: center;
+    flex-shrink:     0;
+    box-shadow:      0 0 0 7px rgba(201,152,42,.20), 0 4px 16px rgba(0,0,0,.18);
+    transition:      transform .3s ease, box-shadow .3s ease;
+}
+.stwel-dot:hover { transform: scale(1.08); }
+
+.stwel-ico {
+    width:      26px;
+    height:     26px;
+    object-fit: contain;
+    filter:     brightness(0) invert(1);
+    display:    block;
+}
+.stwel-ico-df {
+    width:   calc(56px * 0.44);
+    height:  calc(56px * 0.44);
+    display: block;
+}
+
+/* ──────────────────────────────────
+   DATE
+   ────────────────────────────────── */
+.stwel-date-wrap {
+    display:     flex;
+    align-items: center;
+    padding:     0 6px;
+}
+.stwel-date {
+    font-family:    'Lato', sans-serif;
+    font-size:      15px;
+    font-weight:    700;
+    color:          #c9982a;
+    white-space:    nowrap;
+    letter-spacing: .2px;
+}
+
+/* ──────────────────────────────────
+   SCROLL ANIMATION
+   ────────────────────────────────── */
+.stwel-anim .stwel-hide {
+    opacity: 0;
+    transition: opacity .65s ease, transform .65s cubic-bezier(.22,.61,.36,1);
+}
+.stwel-anim .stwel-hide.stwel-left  { transform: translateX(-50px); }
+.stwel-anim .stwel-hide.stwel-right { transform: translateX(50px);  }
+.stwel-anim .stwel-show {
+    opacity:   1 !important;
+    transform: translate(0,0) !important;
+}
+
+/* Empty placeholder */
+.stwel-empty {
+    text-align:   center;
+    color:        #999;
+    font-size:    14px;
+    line-height:  1.8;
+    padding:      30px 20px;
+    background:   #f9f9f9;
+    border:       1px dashed #ddd;
+    border-radius:8px;
+}
+
+/* ──────────────────────────────────
+   RESPONSIVE
+   ────────────────────────────────── */
+@media (max-width: 900px) {
+    .stwel-item { gap: 16px; }
+    .stwel-card { max-width: 100% !important; }
+}
+
+@media (max-width: 620px) {
+    .stwel-track { left: 28px; transform: none; }
+
+    .stwel-item {
+        grid-template-columns: 56px 1fr;
+        grid-template-rows: auto auto;
+        gap: 10px 14px;
+        align-items: start;
+    }
+    .stwel-left .stwel-mid,
+    .stwel-right .stwel-mid       { grid-column:1; grid-row:1/span 2; order:1; align-self:start; padding-top:4px; }
+    .stwel-left .stwel-date-wrap,
+    .stwel-right .stwel-date-wrap { grid-column:2; grid-row:1; order:2; justify-content:flex-start!important; text-align:left!important; padding:0; }
+    .stwel-left .stwel-card-wrap,
+    .stwel-right .stwel-card-wrap { grid-column:2; grid-row:2; order:3; justify-content:flex-start!important; }
+    .stwel-left .stwel-card,
+    .stwel-right .stwel-card      { text-align:left!important; max-width:100%!important; }
+    .stwel-left .stwel-sub        { margin-left:0!important; }
+    .stwel-anim .stwel-hide.stwel-left,
+    .stwel-anim .stwel-hide.stwel-right { transform: translateY(18px); }
+}
+
+@media (max-width: 400px) {
+    .stwel-h { font-size: 18px !important; }
+    .stwel-p { font-size: 13px !important; }
+}

@@ -1,0 +1,10 @@
+/* Static Timeline Elementor – Admin CSS */
+.stw-meta-wrap{padding:10px 0}
+.stw-row{margin-bottom:18px}
+.stw-row label{display:block;font-weight:600;margin-bottom:6px;color:#1d2327}
+.stw-full{width:100%;max-width:700px}
+.stw-help{font-size:11px;color:#888;font-weight:400;margin-left:4px}
+.stw-media-row .stw-preview{margin-bottom:8px}
+.stw-media-row .stw-preview img{border:1px solid #ddd;border-radius:4px;padding:2px;background:#fafafa}
+.stw-upload-btn,.stw-remove-btn{margin-right:6px!important}
+.stw-two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px}
