@@ -11,7 +11,7 @@ use Elementor\Core\Schemes\Typography as Scheme_Typography;
 class STWEL_Widget extends Widget_Base {
 
     public function get_name()        { return 'static_timeline'; }
-    public function get_title()       { return '📅 Static Timeline'; }
+    public function get_title()       { return ' Static Timeline'; }
     public function get_icon()        { return 'eicon-time-line'; }
     public function get_categories()  { return [ 'general' ]; }
     public function get_keywords()    { return [ 'timeline', 'history', 'events', 'static', 'vertical' ]; }
@@ -35,7 +35,7 @@ class STWEL_Widget extends Widget_Base {
 
         /* ─── SECTION: Content ─────────────────────── */
         $this->start_controls_section( 'sec_content', [
-            'label' => '🗂 Content & Group',
+            'label' => ' Content & Group',
             'tab'   => Controls_Manager::TAB_CONTENT,
         ] );
 
@@ -93,7 +93,7 @@ class STWEL_Widget extends Widget_Base {
 
         /* ─── SECTION STYLE: Icon Circle ───────────── */
         $this->start_controls_section( 'sec_icon', [
-            'label' => '🔘 Icon Circle',
+            'label' => ' Icon Circle',
             'tab'   => Controls_Manager::TAB_STYLE,
         ] );
 
@@ -132,7 +132,7 @@ class STWEL_Widget extends Widget_Base {
 
         /* ─── SECTION STYLE: Card ───────────────────── */
         $this->start_controls_section( 'sec_card', [
-            'label' => '🃏 Card',
+            'label' => ' Card',
             'tab'   => Controls_Manager::TAB_STYLE,
         ] );
 
@@ -217,7 +217,7 @@ class STWEL_Widget extends Widget_Base {
 
         /* ─── SECTION STYLE: Heading ────────────────── */
         $this->start_controls_section( 'sec_heading', [
-            'label' => '🔡 Heading',
+            'label' => ' Heading',
             'tab'   => Controls_Manager::TAB_STYLE,
         ] );
 
@@ -307,7 +307,7 @@ class STWEL_Widget extends Widget_Base {
 
         /* ─── SECTION STYLE: Paragraph ──────────────── */
         $this->start_controls_section( 'sec_para', [
-            'label' => '📝 Paragraph',
+            'label' => ' Paragraph',
             'tab'   => Controls_Manager::TAB_STYLE,
         ] );
 
@@ -335,7 +335,7 @@ class STWEL_Widget extends Widget_Base {
 
         /* ─── SECTION STYLE: Date ───────────────────── */
         $this->start_controls_section( 'sec_date', [
-            'label' => '📅 Date',
+            'label' => ' Date',
             'tab'   => Controls_Manager::TAB_STYLE,
         ] );
 
@@ -362,7 +362,7 @@ class STWEL_Widget extends Widget_Base {
 
         /* ─── SECTION STYLE: Spacing ────────────────── */
         $this->start_controls_section( 'sec_spacing', [
-            'label' => '📏 Spacing',
+            'label' => ' Spacing',
             'tab'   => Controls_Manager::TAB_STYLE,
         ] );
 
@@ -414,7 +414,7 @@ class STWEL_Widget extends Widget_Base {
         $q = new WP_Query( $args );
 
         if ( ! $q->have_posts() ) {
-            echo '<div class="stwel-empty">📅 No timeline items found.<br><small>Go to <strong>Dashboard → Timeline → Add New Item</strong></small></div>';
+            echo '<div class="stwel-empty"> No timeline items found.<br><small>Go to <strong>Dashboard → Timeline → Add New Item</strong></small></div>';
             return;
         }
         ?>

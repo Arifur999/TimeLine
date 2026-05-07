@@ -8,7 +8,7 @@ class STWEL_Meta {
     }
 
     public static function add() {
-        add_meta_box( 'stwel_fields', '📅 Timeline Item Details',
+        add_meta_box( 'stwel_fields', ' Timeline Item Details',
             [ __CLASS__, 'render' ], 'stwel_item', 'normal', 'high' );
     }
 
